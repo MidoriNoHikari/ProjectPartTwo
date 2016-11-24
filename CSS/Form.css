@@ -1,0 +1,84 @@
+html {
+  background-color: #AAAA55;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  border-radius: 50%;
+}
+
+a:link, a:visited {
+  background-color: #666633;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: green;
+}
+
+fieldset {
+  background-color: #BBAA88;
+  width: 40%;
+}
+
+[name="playerName"] {
+  margin-left: 2px;
+}
+
+[name="age"] {
+  width: 40px;
+  margin-left: 78px;
+}
+
+[name="gender"] {
+  margin-left: 58px;
+}
+
+[name="alignment"] {
+  margin-left: 35px;
+}
+
+[name="race"] {
+  margin: 0 30px 0 5px;
+}
+
+[name="class"] {
+  margin-left: 5px;
+}
+
+.stats {
+  width: 30px;
+  margin: 0 0 2px 0;
+}
+
+[name="str"] {
+  margin-left: 30px;
+}
+
+[name="dex"] {
+  margin-left: 24px;
+}
+
+[name="con"] {
+  margin-left: 5px;
+}
+
+[name="inT"] {
+  margin-left: 9px;
+}
+
+[name="wis"] {
+  margin-left: 31px;
+}
+
+[name="cha"] {
+  margin-left: 23px;
+}
+

@@ -1,0 +1,25 @@
+html {
+  background-color: #B6C197;
+  font-family: "Courier New", Courier, monospace;
+}
+
+a {
+  border-radius: 50%;
+}
+
+a:link, a:visited {
+  background-color: #666633;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: green;
+}
+
+[name="yourName"] {
+  margin-left: 19px;
+}
