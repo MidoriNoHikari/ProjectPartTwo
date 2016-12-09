@@ -29,7 +29,7 @@ fieldset {
 }
 
 [name="playerName"] {
-  margin-left: 2px;
+  margin-left: 20px;
 }
 
 [name="age"] {
@@ -82,3 +82,14 @@ fieldset {
   margin-left: 23px;
 }
 
+#characterForm {
+  
+  width: 48%;
+  float: left;
+}
+
+#characterPanel {
+  
+  width: 48%;
+  float: left;
+}

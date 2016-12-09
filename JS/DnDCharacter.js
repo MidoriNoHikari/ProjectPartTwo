@@ -131,3 +131,14 @@ function validateForm() {
     return true;
   }
 }
+
+function find() {
+  var name = prompt("Please enter your name","Your Name Here");
+  
+  if (name != null) {
+	$.post("find.php",name,function(data,status){
+		alert("Data: " + data + "\nStatus: " + status);
+	});
+	return false;
+  }
+}

@@ -19,6 +19,28 @@
 	$Backstory = $_POST['background'];
 	
 	mysqli_query($db,"INSERT INTO characterList (PlayerName, CharacterName, Age, Gender, Race, Class, Alignment, Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma, Backstory) VALUES ('$PlayerName', '$CharacterName', '$Age', '$Gender', '$Race', '$Class', '$Alignment', '$Strength', '$Dexterity', '$Constitution', '$Intelligence', '$Wisdom', '$Charisma', '$Backstory')");
+	
+	mysqli_close();
+  }
+  
+  if (isset($_POST['finder'])){
+    $name = $_POST['yourName'];
+	/**search character database for matching and return all that match report values**/ 
+	$result = mysqli_query($db, "SELECT * FROM characterlist;");
+	$num = mysqli_num_rows($result);
+	echo "<p>
+	  <center>Database Output</center>
+	  </p>
+	  <br/><br/>";
+	$i=0; 
+	while ($i < $num){
+      $field1=mysqli_result($result,$i,"Field1");
+	  $field2=mysqli_result($result,$i,"Field2");
+	  echo "<p>
+	    $field1 $field2 </p><br/><br/>
+		<hr><br/>";
+	  $i++;
+	}
   }
 ?>
 
@@ -88,6 +110,7 @@
 		    <option value="halfling">Halfling</option>
 			<option value="dragonBorn">Dragonborn</option>
 	      </select>
+		  <br/>
 		  <label for="class">Class:</label>
 	      <select name="class">
 	        <option value="barbarian">Barbarian</option>
@@ -132,6 +155,16 @@
 		<input type="button" value="Validate" name="button" onclick="validateForm();">
 		<input type="submit" name="submit" id="submission">
       </form>
+	</div>
+	<div id="characterPanel">
+	  <form action="" method="post">
+	    <label for="yourName">Your Name: </label><br/>
+		<input type="text" name="yourName">
+		<br/>
+	    <label for="finder">Search for previous characters:</label>
+		<br/>
+	    <input type="button" value="Query" name="finder" onclick="find();">
+	  </form>
 	</div>
   </body>
 </html>
